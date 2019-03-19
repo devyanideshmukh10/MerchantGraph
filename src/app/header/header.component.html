@@ -1,0 +1,19 @@
+<header>
+  <div class="header">
+    <div class="logo">Merchant Graph</div>
+ <div class="icons-wrap">
+   
+  <div class="icons">
+    <input *ngIf="hide" class="dd-seach-box" type="text" (change)="searchMarchant()" [(ngModel)] ="searchValue" >
+    <span class="header-icons"> <mat-icon style=" cursor: pointer;" (click)="searchMarchantEvent()">search</mat-icon>
+    </span>
+   <span class="header-icons"> <mat-icon>notification_important</mat-icon>
+   </span>
+   <span class="header-icons"> <mat-icon>perm_identity</mat-icon>
+   </span>
+ </div>
+</div>
+
+ </div>
+
+</header>

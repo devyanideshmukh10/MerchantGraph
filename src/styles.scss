@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #EBEBEB;
+  }
+html, body { height: 100%; }
+body {
+   margin: 0;
+   font-size: 1.2rem;
+  font-family: Roboto,
+   "Helvetica Neue", 
+   sans-serif; }
+
+mat-search-bar mat-form-field{
+  background-color: #333333 !important;
+  padding:0px !important;
+  }
+
+  .searchbar mat-search-bar{
+    top: 13px;
+    left: 10px;
+    background: #333;
+  }
+  .mat-search_icons{
+    color: #ffffff;  
+  }
+  .mat-search_icons[_ngcontent-c4] .mat-search_icon-close[_ngcontent-c4], .mat-search_icons[_ngcontent-c4] .mat-search_icon-search[_ngcontent-c4]{
+    background: #333 !important;
+  }
+  .mat-input-element{
+    color:#ffffff !important;
+    caret-color: #ffffff !important;
+  }
+  .mat-form-field-infix{
+   border-bottom:2px solid #3f51b5 !important; 
+  }
+  .mat-form-field.mat-focussed .mat-form-field-ripple{
+    background-color: #ffffff !important;
+  }
+

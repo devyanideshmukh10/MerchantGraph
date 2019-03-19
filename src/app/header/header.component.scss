@@ -1,0 +1,29 @@
+.header {
+  overflow: hidden;
+  padding: 5px 2px;
+  background-color: #333333;
+   }
+
+.header .icons,.logo{
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+.icons-wrap{
+float: right;
+  display: flex;
+  justify-content: center;
+}
+.dd-seach-box{
+background-color:white;
+color:black;
+
+}
+
+
+

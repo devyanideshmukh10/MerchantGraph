@@ -1,0 +1,11 @@
+<div mat-dialog-content>
+  <p>Custom Tag</p>
+    <input class="custontag-value" matInput [(ngModel)]="data.customTag">
+<br>
+<p>Reason  Tag</p>
+    <textarea class="resign-value"matInput [(ngModel)]="data.reasonTag"></textarea>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>

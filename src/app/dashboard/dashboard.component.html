@@ -1,0 +1,440 @@
+<div class="merchant-header-wrapper">
+  <app-header (searchValueEmit)="searchValueEmit($event)" ></app-header>
+
+<div class="merchant-wrapper">
+  <div class="merchant-icon-center">
+    <div class="merchant-icon-wrapper">
+      <img class="img-circle" src="/assets/Starbucks_logo.png">
+    </div>
+<div class="merchant-name">
+  Starbucks Coffee
+</div>
+</div>
+
+</div>
+  </div>
+<div class="container-fluid">
+  <div class="row merchant-info-wrapper">
+ 
+ <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 merchant-left-info">
+   <div class="merchant-about-wrapper">
+ <div class="about-info-wrapper">
+<div class="info">
+  <div class="title-icon-wrapper">
+    <img class="img-responsive" src="/assets/about.png">
+  </div>
+<div class="title-info-wrapper">
+  About
+</div>
+</div>
+<div class="info">
+    <div class="title-icon-wrapper">
+        <mat-icon style="visibility:hidden;">home</mat-icon>
+          </div>
+          <div class="merchant-name-title">
+  Starbucks Coffee
+</div>
+ </div>
+<div class="Merchant-data-wrapper info">
+    <div class="title-icon-wrapper">
+        <mat-icon style="visibility:hidden;">home</mat-icon>
+          </div>
+          <div class="actual-merchant-info">
+<div class="memberID">Member ID: {{merchantData.merchantId}}</div>
+<div class="categoryCode">Merchant Category Code: {{marchantData?.address?.addressLine1}}</div>
+<div class="merchantPhone">Merchant Phone Number: {{merchantData.phone?.number}}</div>
+</div>
+    </div>
+  </div>
+<div class="address-info info">
+    <div class="title-icon-wrapper">
+        <mat-icon>home</mat-icon>
+          </div>
+    <div class="address-info-wrapper">
+      3699 McKinney Avenue,
+      Dallas, TX 75204
+    </div>
+</div>
+<div class="phone-info info">
+  <div class="title-icon-wrapper">
+      <mat-icon>phone</mat-icon>
+    </div>
+  <div class="phone-info-wrapper">
+    214-219-1735
+  </div>
+</div>
+
+<div class="map info">
+    <div class="title-icon-wrapper">
+        <mat-icon style="visibility:hidden;">home</mat-icon>
+          </div>
+          <div class="googlemap-wrapper">
+    <img class="map img-responsive" src="/assets/MapGraphic.png">
+  </div>
+
+</div>
+
+
+
+<div id="accordion">
+  
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+    
+        </a>
+        See More
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <div class="email-info info">
+          <div class="title-icon-wrapper">
+              <mat-icon>email</mat-icon>
+            </div>
+          <div class="email-info-wrapper">
+            eastdallas.store2817@starbucks.com
+          </div>
+      </div>
+      </div>
+    </div>
+ 
+</div>
+
+</div>
+
+<div class="merchant-about-wrapper">
+    <div class="info">
+        <div class="title-icon-wrapper">
+          <img class="img-responsive" src="/assets/categories.png">
+        </div>
+        <div class="categories">
+      <div class="title-info-wrapper">
+        Categories
+      </div>
+      <div class="categories-description">
+          Fast Food
+        </div>
+      </div>
+      </div>  
+</div>
+
+<div class="merchant-about-wrapper">
+  <div class="info">
+      <div class="title-icon-wrapper">
+        <img class="img-responsive" src="/assets/tags.png">
+      </div>
+      <div class="categories">
+    <div class="title-info-wrapper">
+      Tags
+    </div>
+    <div>
+    <div class="categories-description">
+        Positive Tags
+      </div>
+      <div class="tags-wrapper custom-tag-holder">
+        {{customTagValue}} 
+        <span class="icon-mat"> <mat-icon (click)='openDailog()'>+</mat-icon>
+        </span>
+          <div class="positive-tag">
+              Add a positive tag
+          </div>
+        
+      </div>
+
+    </div>
+    
+
+      <div class="categories-description">
+        Negative Tags
+      </div>
+
+    </div>
+    </div>
+
+   
+</div>
+  </div>
+  
+  <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 merchant-right-info">
+    <div class="merchant-stream">
+ <div class="merchant-stream-title">
+     <div class="merchant-stream-title-icon">
+      <img class="img-responsive" src="/assets/disputedTransaction.png">
+         </div>
+    <div style="width:100%;">
+ <div class="merchant-stream-title-wrapper">
+     Disputed Transactions
+   </div>
+ <div class="timestamp">
+    <!-- <textarea type="text" class ="dd-width" [(ngModel)]="messageInfo" placeholder="Update merchant stream"></textarea> 
+      -->
+      February 27, 2019 07:01 PM
+ </div>
+ </div>     
+ </div>
+ <div class="comment-display-wrapper">
+   Emily J. disputed charges on Account **9038 on february 27, 2019 
+ </div>
+ <div class="comment-wrapper">
+  <div class="comment-icon-wrapper">
+    <mat-icon>comment</mat-icon>
+    Comment
+    </div> 
+</div>
+
+<div class="dispute-title">
+  <div class="dispute-title-icon">
+    <img class="img-responsive" src="/assets/man.png">
+      </div>
+ <div class="comments-added-wrapper" style="width:100%;">
+
+</div>     
+</div>
+
+ </div>
+ 
+ <div class="merchant-stream">
+  <div class="merchant-stream-title">
+      <div class="merchant-stream-title-icon">
+        <img class="img-responsive" src="/assets/chargeBack.png">
+          </div>
+     <div style="width:100%;">
+  <div class="merchant-stream-title-wrapper">
+      Charge Back Requests
+    </div>
+  <div class="timestamp">
+     <!-- <textarea type="text" class ="dd-width" [(ngModel)]="messageInfo" placeholder="Update merchant stream"></textarea> 
+       -->
+       February 27, 2019 07:01 PM
+  </div>
+  </div>     
+  </div>
+  <div class="comment-display-wrapper">
+    A charge back was given to Account **3048 on February 23, 2019 
+  </div>
+  <div class="comment-wrapper">
+   <div class="comment-icon-wrapper">
+     <mat-icon>comment</mat-icon>
+     Comment
+     </div> 
+ </div>
+ 
+ <div class="dispute-title">
+   <div class="dispute-title-icon">
+    <img class="img-responsive" src="/assets/man.png">
+       </div>
+  <div class="comments-added-wrapper" style="width:100%;">
+  </div>     
+ </div>
+   </div>
+   <div class="merchant-stream">
+    <div class="merchant-stream-title">
+        <div class="merchant-stream-title-icon">
+          <img class="img-responsive" src="/assets/disputedTransaction.png">
+            </div>
+       <div style="width:100%;">
+    <div class="merchant-stream-title-wrapper">
+        Disputed Transactions
+      </div>
+    <div class="timestamp">
+       <!-- <textarea type="text" class ="dd-width" [(ngModel)]="messageInfo" placeholder="Update merchant stream"></textarea> 
+         -->
+         February 27, 2019 07:01 PM
+    </div>
+    </div>     
+    </div>
+    <div class="comment-display-wrapper">
+      Emily J. disputed charges on Account **9038 on february 27, 2019 
+    </div>
+    <div class="comment-wrapper">
+     <div class="comment-icon-wrapper">
+       <mat-icon>comment</mat-icon>
+       Comment
+       </div> 
+   </div>
+   
+   <div class="dispute-title">
+     <div class="dispute-title-icon">
+      <img class="img-responsive" src="/assets/man.png">
+         </div>
+    <div class="comments-added-wrapper" style="width:100%;">
+   
+   </div>     
+   </div>
+      </div>
+
+      <!-- <div class="merchant-stream">
+        <div class="merchant-stream-title">
+            <div class="merchant-stream-title-icon">
+                <mat-icon>av_timer</mat-icon>
+                </div>
+           <div style="width:100%;">
+        <div class="merchant-stream-title-wrapper">
+            Merchant Reviews
+          </div>
+          <div class="review-wrapper">
+            <div class="reviewer-wrapper">
+                <div class="reviewer-section-wrapper">
+                <div class="reviewer-image-wrapper">
+                  <mat-icon>fiber_new</mat-icon>
+                </div>
+                <div class="reviewer-details-wrapper">
+                  <div class="reviewer-name-wrapper">
+                    Ankita M
+                  </div>
+                  <div class="reviewer-address-wrapper">
+                    Grapevine, TX
+                  </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="review-comment-wrapper">
+                <div class="reviewcomment-section-wrapper">
+              <div class="ratings-wrapper">
+                <div class="ratings">
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_half</mat-icon>
+                </div>
+                <div class="ratings-date-wrapper">
+                  02/03/2019
+                </div>
+              </div>
+              <div class="comments-ratings-wrapper">
+                Very helpful friendly staff it is larger. I have and will always recommend visiting that store.
+              </div>
+              </div>
+            </div>
+
+
+        </div>
+        <div class="review-wrapper">
+            <div class="reviewer-wrapper">
+                <div class="reviewer-section-wrapper">
+                <div class="reviewer-image-wrapper">
+                  <mat-icon>fiber_new</mat-icon>
+                </div>
+                <div class="reviewer-details-wrapper">
+                  <div class="reviewer-name-wrapper">
+                    Ankita M
+                  </div>
+                  <div class="reviewer-address-wrapper">
+                    Grapevine, TX
+                  </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="review-comment-wrapper">
+                <div class="reviewcomment-section-wrapper">
+              <div class="ratings-wrapper">
+                <div class="ratings">
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                </div>
+                <div class="ratings-date-wrapper">
+                  02/03/2019
+                </div>
+              </div>
+              <div class="comments-ratings-wrapper">
+                Very helpful friendly staff it is larger. I have and will always recommend visiting that store.
+              </div>
+              </div>
+            </div>
+
+
+        </div>
+        <div class="review-wrapper">
+            <div class="reviewer-wrapper">
+                <div class="reviewer-section-wrapper">
+                <div class="reviewer-image-wrapper">
+                  <mat-icon>fiber_new</mat-icon>
+                </div>
+                <div class="reviewer-details-wrapper">
+                  <div class="reviewer-name-wrapper">
+                    Ankita M
+                  </div>
+                  <div class="reviewer-address-wrapper">
+                    Grapevine, TX
+                  </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="review-comment-wrapper">
+                <div class="reviewcomment-section-wrapper">
+              <div class="ratings-wrapper">
+                <div class="ratings">
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_half</mat-icon>
+                </div>
+                <div class="ratings-date-wrapper">
+                  02/03/2019
+                </div>
+              </div>
+              <div class="comments-ratings-wrapper">
+                Very helpful friendly staff it is larger. I have and will always recommend visiting that store.
+              </div>
+              </div>
+            </div>
+        </div>
+        <div class="review-wrapper">
+            <div class="reviewer-wrapper">
+                <div class="reviewer-section-wrapper">
+                <div class="reviewer-image-wrapper">
+                  <mat-icon>fiber_new</mat-icon>
+                </div>
+                <div class="reviewer-details-wrapper">
+                  <div class="reviewer-name-wrapper">
+                    Ankita M
+                  </div>
+                  <div class="reviewer-address-wrapper">
+                    Grapevine, TX
+                  </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="review-comment-wrapper">
+                <div class="reviewcomment-section-wrapper">
+              <div class="ratings-wrapper">
+                <div class="ratings">
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_half</mat-icon>
+                </div>
+                <div class="ratings-date-wrapper">
+                  02/03/2019
+                </div>
+              </div>
+              <div class="comments-ratings-wrapper">
+                Very helpful friendly staff it is larger. I have and will always recommend visiting that store.
+              </div>
+              </div>
+            </div>
+
+
+        </div>
+
+        </div>     
+        </div>
+          
+
+          </div> -->
+
+   </div>
+   
+ </div>
+
+
+
+</div>
